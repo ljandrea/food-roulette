@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
 import Col from 'react-bootstrap/Col';
-
+import Card from 'react-bootstrap/Card';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 class FoodForm extends Component {
-    useStyles = () => {
-        return makeStyles(theme => ({
-            root: {
-                padding: theme.spacing(3, 2),
-            },
-        }));
-    }
 
     render() {
-        const classes = this.useStyles();
+        const useStyles = makeStyles(theme => ({
+            button: {
+                margin: theme.spacing(1),
+            },
+            input: {
+                display: 'none',
+            },
+        }));
 
         return (
-            <Col id='food-form'>
-                {/* <Paper className={classes.root}>
-                    <Typography variant="h5" component="h3">
-                        This is a sheet of paper.
-        </Typography>
-                    <Typography component="p">
-                        Paper can be used to build surface or other elements for your application.
-        </Typography>
-                </Paper> */}
-
+            <Col className='home-comp'>
+                <div className='home-content' id='food-form'>
+                    <Card>
+                        <Card.Body>
+                            <Card.Title>pick some cuisines!</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">whatcha feelin' today?</Card.Subtitle>
+                            <Card.Text>
+                                <Button variant="contained" className={useStyles.button}>
+                                    Default
+                                </Button>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
             </Col>
         );
     }

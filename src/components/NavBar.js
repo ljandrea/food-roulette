@@ -7,7 +7,6 @@ import Nav from 'react-bootstrap/Nav';
 class NavBar extends Component {
     render() {
         return (
-            // <div id='nav'>
             <Row id='nav-row'>
                 <Col className='nav-col' id='nav-title'>
                     <h6>brandrea's food roulette</h6>
@@ -24,10 +23,12 @@ class NavBar extends Component {
                         <Nav.Item>
                             <Nav.Link eventKey="link-2">Link</Nav.Link>
                         </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="link-2">Link</Nav.Link>
+                        </Nav.Item>
                     </Nav>
                 </Col>
             </Row>
-            // </div>
         );
     }
 }
