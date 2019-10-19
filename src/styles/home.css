@@ -32,3 +32,8 @@
     transform: translate(-50%, -30%);
     width: 70%;
 }
+
+button {
+    margin-right: 1em !important;
+    margin-bottom: 1em !important;
+}

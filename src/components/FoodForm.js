@@ -16,17 +16,45 @@ class FoodForm extends Component {
             },
         }));
 
+        const cuisines = ["American", "Thai", "Japanese", "Italian", "Chinese", "Vietnamese"];
+        const foods = ["Burgers", "Pasta", "Ramen", "Sushi", "Breakfast"];
+
         return (
             <Col className='home-comp'>
-                <div className='home-content' id='food-form'>
+                <div id='food-form'>
                     <Card>
                         <Card.Body>
-                            <Card.Title>pick some cuisines!</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">whatcha feelin' today?</Card.Subtitle>
-                            <Card.Text>
-                                <Button variant="contained" className={useStyles.button}>
-                                    Default
+                            <Card.Title>pick some foooood!</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">whatcha feelin?</Card.Subtitle>
+                            <hr />
+
+                            {cuisines.map((cuisine) => {
+                                let idName = cuisine + "-option";
+                                return <Button variant="contained" className={useStyles.button} id={idName}>
+                                    {cuisine}
                                 </Button>
+                            })}
+                            {foods.map((food) => {
+                                let idName = food + "-option";
+                                return <Button variant="contained" className={useStyles.button} id={idName}>
+                                    {food}
+                                </Button>
+                            })}
+                            <Card.Text>
+                                selected:
+                                <br />
+                                {cuisines.map((cuisine) => {
+                                    let idName = cuisine + "-selected";
+                                    return <Button variant="contained" className={useStyles.button} id={idName}>
+                                        {cuisine}
+                                    </Button>
+                                })}
+                                {foods.map((food) => {
+                                    let idName = food + "-selected";
+                                    return <Button variant="contained" className={useStyles.button} id={idName}>
+                                        {food}
+                                    </Button>
+                                })}
                             </Card.Text>
                         </Card.Body>
                     </Card>

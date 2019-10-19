@@ -6,8 +6,8 @@ class Intro extends Component {
         return (
             <Col className='home-comp' id='intro-div'>
                 <div class='home-content'>
-                    <h1>hi there.</h1>
-                    <h2>so, you don't know what to eat today...</h2>
+                    <h1>here we go again...</h1>
+                    <h2>so, you don't know what to eat today.</h2>
                 </div>
             </Col >
         );
